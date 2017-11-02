@@ -11,7 +11,7 @@ import UIKit
 class DDItem3NavVC: DDBaseNavVC {
     convenience init(){
         let rootVC = DDItem3VC()
-        rootVC.title = "title3"
+        rootVC.title = GDLanguageManager.text("tabbar_item3_title")
         self.init(rootViewController: rootVC)
         self.navigationBar.isHidden = true
         

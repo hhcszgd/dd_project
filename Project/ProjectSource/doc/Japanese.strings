@@ -7,3 +7,7 @@
 */
 "country_code" = "114";
 "language_identifier" = "ja-jp";
+
+"tabbar_item1_title" = "find_jp";
+"tabbar_item2_title" = "interaction_jp";
+"tabbar_item3_title" = "profile_jp";

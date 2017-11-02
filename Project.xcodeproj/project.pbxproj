@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15177B981FAB09AD00FC92BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15177B9A1FAB09AD00FC92BA /* InfoPlist.strings */; };
 		15DF2FB91FA9AE0400588AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF2FB81FA9AE0400588AF1 /* AppDelegate.swift */; };
 		15DF2FBB1FA9AE0400588AF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF2FBA1FA9AE0400588AF1 /* ViewController.swift */; };
 		15DF2FBE1FA9AE0400588AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DF2FBC1FA9AE0400588AF1 /* Main.storyboard */; };
@@ -86,6 +87,12 @@
 
 /* Begin PBXFileReference section */
 		0E28BB7703692892D21A417D /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
+		15177B991FAB09AD00FC92BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15177B9B1FAB09B000FC92BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		15177B9C1FAB09B400FC92BA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		15177B9D1FAB09B500FC92BA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15177B9E1FAB09B700FC92BA /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15177B9F1FAB09B800FC92BA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15DF2FB51FA9AE0400588AF1 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DF2FB81FA9AE0400588AF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15DF2FBA1FA9AE0400588AF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -414,6 +421,7 @@
 				15E67D851FA9BE0C00A9BB34 /* Japanese.strings */,
 				15E67D8A1FA9BEBE00A9BB34 /* Vietnamese.strings */,
 				15E67D8F1FA9BF2C00A9BB34 /* Thai.strings */,
+				15177B9A1FAB09AD00FC92BA /* InfoPlist.strings */,
 			);
 			path = doc;
 			sourceTree = "<group>";
@@ -818,6 +826,7 @@
 				15DF306C1FA9AFAC00588AF1 /* Simplified.strings in Resources */,
 				15DF306A1FA9AFAC00588AF1 /* SystemLanguage.strings in Resources */,
 				15DF306D1FA9AFAC00588AF1 /* Traditional.strings in Resources */,
+				15177B981FAB09AD00FC92BA /* InfoPlist.strings in Resources */,
 				15E67D861FA9BE0C00A9BB34 /* Japanese.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1005,6 +1014,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		15177B9A1FAB09AD00FC92BA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15177B991FAB09AD00FC92BA /* en */,
+				15177B9B1FAB09B000FC92BA /* zh-Hans */,
+				15177B9C1FAB09B400FC92BA /* zh-Hant */,
+				15177B9D1FAB09B500FC92BA /* ja */,
+				15177B9E1FAB09B700FC92BA /* vi */,
+				15177B9F1FAB09B800FC92BA /* th */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		15DF2FBC1FA9AE0400588AF1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

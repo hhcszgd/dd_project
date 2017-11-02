@@ -12,6 +12,7 @@ class DDItem1NavVC: DDBaseNavVC {
     convenience init(){
         let rootVC = DDItem1VC()
         rootVC.title = "title1"
+        rootVC.title = GDLanguageManager.text("tabbar_item1_title")
         self.init(rootViewController: rootVC)
         self.navigationBar.shadowImage = UIImage()
 //        self.title = "navTItle"

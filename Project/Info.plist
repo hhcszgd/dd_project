@@ -72,8 +72,23 @@
                 <false/>
             </dict>
             
+            <key>api.zdlao.dev</key>
+            <dict>
+                <key>NSExceptionMinimumTLSVersion</key>
+                <string>TLSv1.0</string>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            
         </dict>
     </dict>
+    
+    
     <!-- http -->
+    
 </dict>
 </plist>

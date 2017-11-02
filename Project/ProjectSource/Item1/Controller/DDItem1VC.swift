@@ -18,6 +18,13 @@ class DDItem1VC: DDNormalVC {
 //        print(sha1)
         self.testLocalize()
         // Do any additional setup after loading the view.
+        self.testNeswork()
+    }
+    func testNeswork() {
+        let a = DDRequestManager.share.checkPhone()?.responseJSON(completionHandler: { (response) in
+            print("xxx\(response.result)")
+        })
+        print( "asdfas\(a )")
     }
 
     func testLocalize() {
