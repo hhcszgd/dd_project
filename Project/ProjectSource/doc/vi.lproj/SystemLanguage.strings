@@ -4,7 +4,6 @@
 
   Created by WY on 2017/10/31.
   Copyright © 2017年 com.16lao. All rights reserved.
-*/
-"title" = "system_english_title";
-"country_code" = "119";
-"language_identifier" = "en_us";
+*///越南
+"country_code" = "115";
+"language_identifier" = "vi_vn";

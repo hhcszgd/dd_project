@@ -6,3 +6,6 @@
   Copyright © 2017年 com.16lao. All rights reserved.
 */
 "title" = "system_simplified_title";
+
+"country_code" = "110";
+"language_identifier" = "zh_cn";

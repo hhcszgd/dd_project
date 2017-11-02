@@ -61,6 +61,9 @@
 		15DF30751FA9AFAC00588AF1 /* DDItem4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF30381FA9AFAB00588AF1 /* DDItem4VC.swift */; };
 		15DF30761FA9AFAC00588AF1 /* DDItem5NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF303E1FA9AFAB00588AF1 /* DDItem5NavVC.swift */; };
 		15DF30771FA9AFAC00588AF1 /* DDItem5VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF303F1FA9AFAB00588AF1 /* DDItem5VC.swift */; };
+		15E67D861FA9BE0C00A9BB34 /* Japanese.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E67D851FA9BE0C00A9BB34 /* Japanese.strings */; };
+		15E67D8B1FA9BEBE00A9BB34 /* Vietnamese.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E67D8A1FA9BEBE00A9BB34 /* Vietnamese.strings */; };
+		15E67D901FA9BF2C00A9BB34 /* Thai.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E67D8F1FA9BF2C00A9BB34 /* Thai.strings */; };
 		5CFD590610F44FD37A458B9F /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB835D84B7E259E8529C7D4 /* Pods_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +148,18 @@
 		15DF30381FA9AFAB00588AF1 /* DDItem4VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDItem4VC.swift; sourceTree = "<group>"; };
 		15DF303E1FA9AFAB00588AF1 /* DDItem5NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDItem5NavVC.swift; sourceTree = "<group>"; };
 		15DF303F1FA9AFAB00588AF1 /* DDItem5VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDItem5VC.swift; sourceTree = "<group>"; };
+		15E67D821FA9BDDB00A9BB34 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		15E67D831FA9BDDB00A9BB34 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		15E67D841FA9BDDC00A9BB34 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SystemLanguage.strings; sourceTree = "<group>"; };
+		15E67D851FA9BE0C00A9BB34 /* Japanese.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Japanese.strings; sourceTree = "<group>"; };
+		15E67D871FA9BE9300A9BB34 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		15E67D881FA9BE9400A9BB34 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		15E67D891FA9BE9400A9BB34 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/SystemLanguage.strings; sourceTree = "<group>"; };
+		15E67D8A1FA9BEBE00A9BB34 /* Vietnamese.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Vietnamese.strings; sourceTree = "<group>"; };
+		15E67D8C1FA9BF1500A9BB34 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Main.strings; sourceTree = "<group>"; };
+		15E67D8D1FA9BF1500A9BB34 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		15E67D8E1FA9BF1500A9BB34 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/SystemLanguage.strings; sourceTree = "<group>"; };
+		15E67D8F1FA9BF2C00A9BB34 /* Thai.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Thai.strings; sourceTree = "<group>"; };
 		9C975D751135A674C5F77CB3 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB835D84B7E259E8529C7D4 /* Pods_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -396,6 +411,9 @@
 				15DF301B1FA9AFAB00588AF1 /* English.strings */,
 				15DF301C1FA9AFAB00588AF1 /* Simplified.strings */,
 				15DF301D1FA9AFAB00588AF1 /* Traditional.strings */,
+				15E67D851FA9BE0C00A9BB34 /* Japanese.strings */,
+				15E67D8A1FA9BEBE00A9BB34 /* Vietnamese.strings */,
+				15E67D8F1FA9BF2C00A9BB34 /* Thai.strings */,
 			);
 			path = doc;
 			sourceTree = "<group>";
@@ -770,6 +788,9 @@
 				Base,
 				"zh-Hans",
 				"zh-Hant",
+				ja,
+				vi,
+				th,
 			);
 			mainGroup = 15DF2FAC1FA9AE0400588AF1;
 			productRefGroup = 15DF2FB61FA9AE0400588AF1 /* Products */;
@@ -788,13 +809,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15E67D901FA9BF2C00A9BB34 /* Thai.strings in Resources */,
 				15DF2FC61FA9AE0400588AF1 /* LaunchScreen.storyboard in Resources */,
+				15E67D8B1FA9BEBE00A9BB34 /* Vietnamese.strings in Resources */,
 				15DF2FC31FA9AE0400588AF1 /* Assets.xcassets in Resources */,
 				15DF306B1FA9AFAC00588AF1 /* English.strings in Resources */,
 				15DF2FBE1FA9AE0400588AF1 /* Main.storyboard in Resources */,
 				15DF306C1FA9AFAC00588AF1 /* Simplified.strings in Resources */,
 				15DF306A1FA9AFAC00588AF1 /* SystemLanguage.strings in Resources */,
 				15DF306D1FA9AFAC00588AF1 /* Traditional.strings in Resources */,
+				15E67D861FA9BE0C00A9BB34 /* Japanese.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,6 +1009,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				15DF2FBD1FA9AE0400588AF1 /* Base */,
+				15E67D821FA9BDDB00A9BB34 /* ja */,
+				15E67D871FA9BE9300A9BB34 /* vi */,
+				15E67D8C1FA9BF1500A9BB34 /* th */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -993,6 +1020,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				15DF2FC51FA9AE0400588AF1 /* Base */,
+				15E67D831FA9BDDB00A9BB34 /* ja */,
+				15E67D881FA9BE9400A9BB34 /* vi */,
+				15E67D8D1FA9BF1500A9BB34 /* th */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1003,6 +1033,9 @@
 				15DF301A1FA9AFAB00588AF1 /* en */,
 				15DF301E1FA9AFAB00588AF1 /* zh-Hans */,
 				15DF301F1FA9AFAB00588AF1 /* zh-Hant */,
+				15E67D841FA9BDDC00A9BB34 /* ja */,
+				15E67D891FA9BE9400A9BB34 /* vi */,
+				15E67D8E1FA9BF1500A9BB34 /* th */,
 			);
 			name = SystemLanguage.strings;
 			sourceTree = "<group>";
