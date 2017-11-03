@@ -12,7 +12,10 @@ class DDProvideForceTouchVC: DDViewController ,  UIViewControllerPreviewingDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 9.0, *) {registerForPreviewing(with: self, sourceView: view)}
+        if #available(iOS 9.0, *) {
+            registerForPreviewing(with: self, sourceView: view)
+        
+        }
         // Do any additional setup after loading the view.
     }
     /// Create a previewing view controller to be shown at "Peek".
@@ -30,16 +33,16 @@ class DDProvideForceTouchVC: DDViewController ,  UIViewControllerPreviewingDeleg
          Width should be zero, because it's not used in portrait.
          */
         ///:可判断location的位置 , 在判断是否需要执行forcetouch//暂未实现
-        let detailViewController = UIViewController()
+        let detailViewController = DDProvideForceTouchVC()
         detailViewController.title = "3D touch to vc"
         detailViewController.view.backgroundColor = UIColor.red
         detailViewController.title = "vcTitle"
-        detailViewController.preferredContentSize = CGSize(width: 300, height: 300)
+        detailViewController.preferredContentSize = CGSize(width: 300, height: 400)
         
         // Set the source rect to the cell frame, so surrounding elements are blurred.
         //        previewingContext.sourceRect = cell.frame
         if #available(iOS 9.0, *) {
-            previewingContext.sourceRect = CGRect(x: UIScreen.main.bounds.size.width / 2, y: UIScreen.main.bounds.size.height / 2, width: UIScreen.main.bounds.size.width * 0.9, height: UIScreen.main.bounds.size.width * 0.9)
+            previewingContext.sourceRect = CGRect(x:UIScreen.main.bounds.size.width/2, y:UIScreen.main.bounds.size.width/2, width: 0 , height: 0  )
         } else {
             // Fallback on earlier versions
         }
@@ -53,7 +56,7 @@ class DDProvideForceTouchVC: DDViewController ,  UIViewControllerPreviewingDeleg
         show(viewControllerToCommit, sender: self)
     }
     @available(iOS 9.0, *)
-    override var previewActionItems : [UIPreviewActionItem] {//UIViewController 自带属性,用以返回peek上划后下面显示的标题,重写以提供实现
+    override var previewActionItems : [UIPreviewActionItem] {//UIViewController 自带属性,用以返回peek上划后下面显示的标题,在要pop的控制器中重写以提供实现
         func previewActionForTitle(_ title: String, style: UIPreviewActionStyle = .default) -> UIPreviewAction {
             return UIPreviewAction(title: title, style: style) { previewAction, viewController in
                 //         guard let detailViewController = viewController as? GDOperatVC/*,
@@ -68,8 +71,8 @@ class DDProvideForceTouchVC: DDViewController ,  UIViewControllerPreviewingDeleg
         let subAction1 = previewActionForTitle("Sub Action 1")
         let subAction2 = previewActionForTitle("Sub Action 2")
         let groupedActions = UIPreviewActionGroup(title: "Sub Actions…", style: .default, actions: [subAction1, subAction2] )
-        return [action1, action2, groupedActions]
-        
+//        return [action1, action2, groupedActions]
+            return [action1, action2]
     }
     
     

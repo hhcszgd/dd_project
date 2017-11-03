@@ -43,7 +43,10 @@ let MainTitleColor = UIColor.init(hexString: "333333")
 let SubTitleColor = UIColor.init(hexString: "7f7f7f")
 let BackGrayColor = UIColor.init(red: 244.0/256.0, green: 244.0/256.0, blue: 244.0/256.0, alpha: 1.0) // UIColor.init(hexString: "f4f4f4")
 let THEMECOLOR = UIColor.init(hexString: "e95513")
-let NavigationBarHeight : CGFloat = 64
+var  NavigationBarHeight : CGFloat {
+    if DDDevice.type == .iphoneX {return 88}
+    return 64
+}
 let SCREENWIDTH = UIScreen.main.bounds.size.width
 let SCREENHEIGHT = UIScreen.main.bounds.size.height
 

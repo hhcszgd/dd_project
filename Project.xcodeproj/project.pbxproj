@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		15177B981FAB09AD00FC92BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15177B9A1FAB09AD00FC92BA /* InfoPlist.strings */; };
+		1584C2581FAB29E200F09CD3 /* DDFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584C2571FAB29E200F09CD3 /* DDFlowLayout.swift */; };
+		1584C25A1FAB29F600F09CD3 /* DDSearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584C2591FAB29F600F09CD3 /* DDSearchLayout.swift */; };
+		1584C25C1FAB381700F09CD3 /* DDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584C25B1FAB381700F09CD3 /* DDDevice.swift */; };
 		15DF2FB91FA9AE0400588AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF2FB81FA9AE0400588AF1 /* AppDelegate.swift */; };
 		15DF2FBB1FA9AE0400588AF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF2FBA1FA9AE0400588AF1 /* ViewController.swift */; };
 		15DF2FBE1FA9AE0400588AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DF2FBC1FA9AE0400588AF1 /* Main.storyboard */; };
@@ -93,6 +96,9 @@
 		15177B9D1FAB09B500FC92BA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15177B9E1FAB09B700FC92BA /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15177B9F1FAB09B800FC92BA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1584C2571FAB29E200F09CD3 /* DDFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFlowLayout.swift; sourceTree = "<group>"; };
+		1584C2591FAB29F600F09CD3 /* DDSearchLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDSearchLayout.swift; sourceTree = "<group>"; };
+		1584C25B1FAB381700F09CD3 /* DDDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDevice.swift; sourceTree = "<group>"; };
 		15DF2FB51FA9AE0400588AF1 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DF2FB81FA9AE0400588AF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15DF2FBA1FA9AE0400588AF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +203,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1584C2521FAB299F00F09CD3 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1584C2531FAB299F00F09CD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1584C2571FAB29E200F09CD3 /* DDFlowLayout.swift */,
+				1584C2591FAB29F600F09CD3 /* DDSearchLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1584C2541FAB299F00F09CD3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1584C2551FAB299F00F09CD3 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sub;
+			sourceTree = "<group>";
+		};
+		1584C2561FAB299F00F09CD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		15DF2FAC1FA9AE0400588AF1 = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +385,7 @@
 				15DF30041FA9AFAB00588AF1 /* GDPhotoManager.swift */,
 				15DF30051FA9AFAB00588AF1 /* GDStorgeManager.swift */,
 				15DF30061FA9AFAB00588AF1 /* PCH.swift */,
+				1584C25B1FAB381700F09CD3 /* DDDevice.swift */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -634,6 +678,11 @@
 		15DF30431FA9AFAB00588AF1 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				1584C2541FAB299F00F09CD3 /* Controller */,
+				1584C2561FAB299F00F09CD3 /* Model */,
+				1584C2521FAB299F00F09CD3 /* Other */,
+				1584C2551FAB299F00F09CD3 /* Sub */,
+				1584C2531FAB299F00F09CD3 /* View */,
 				15DF30441FA9AFAB00588AF1 /* LanguageSet */,
 			);
 			path = Public;
@@ -935,6 +984,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15DF30691FA9AFAC00588AF1 /* GDIBScrollView.swift in Sources */,
+				1584C25C1FAB381700F09CD3 /* DDDevice.swift in Sources */,
 				15DF30711FA9AFAC00588AF1 /* DDItem2VC.swift in Sources */,
 				15DF304B1FA9AFAC00588AF1 /* DDInternalVC.swift in Sources */,
 				15DF30561FA9AFAC00588AF1 /* DDForceTouchProtocol.swift in Sources */,
@@ -956,6 +1006,7 @@
 				15DF30591FA9AFAC00588AF1 /* DDRequestManager.swift in Sources */,
 				15DF30631FA9AFAC00588AF1 /* GDCoverView.swift in Sources */,
 				15DF30721FA9AFAC00588AF1 /* DDItem3NavVC.swift in Sources */,
+				1584C25A1FAB29F600F09CD3 /* DDSearchLayout.swift in Sources */,
 				15DF30771FA9AFAC00588AF1 /* DDItem5VC.swift in Sources */,
 				15DF30651FA9AFAC00588AF1 /* GDIBPhoto.swift in Sources */,
 				15DF30581FA9AFAC00588AF1 /* DDAccount.swift in Sources */,
@@ -963,6 +1014,7 @@
 				15DF30661FA9AFAC00588AF1 /* GDIBCollectionCell.swift in Sources */,
 				15DF306F1FA9AFAC00588AF1 /* DDItem1VC.swift in Sources */,
 				15DF305D1FA9AFAC00588AF1 /* GDPhotoManager.swift in Sources */,
+				1584C2581FAB29E200F09CD3 /* DDFlowLayout.swift in Sources */,
 				15DF30741FA9AFAC00588AF1 /* DDItem4NavVC.swift in Sources */,
 				15DF30731FA9AFAC00588AF1 /* DDItem3VC.swift in Sources */,
 				15DF304E1FA9AFAC00588AF1 /* DDRootNavVC.swift in Sources */,

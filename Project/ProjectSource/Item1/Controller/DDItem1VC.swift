@@ -46,12 +46,12 @@ class DDItem1VC: DDNormalVC {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("test account")
-        
-        DDAccount.share.deleteAccountFromDisk()
-        
-        DDAccount.share.setPropertisOfShareBy(dict : ["name": "JohnLock" , "head_images" : "http://www.baidu.com/" , "member_id" : "3"] as [String : AnyObject])
-        
-        self.navigationController?.pushViewController(DDNormalVC(), animated: true )
+        print(DDDevice.type)
+//        DDAccount.share.deleteAccountFromDisk()
+//        
+//        DDAccount.share.setPropertisOfShareBy(dict : ["name": "JohnLock" , "head_images" : "http://www.baidu.com/" , "member_id" : "3"] as [String : AnyObject])
+//        
+//        self.navigationController?.pushViewController(DDNormalVC(), animated: true )
     }
 
     /*

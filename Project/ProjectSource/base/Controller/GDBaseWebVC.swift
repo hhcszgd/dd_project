@@ -34,8 +34,11 @@ class GDBaseWebVC: DDInternalVC , WKScriptMessageHandler ,  WKNavigationDelegate
         self.webView.configuration.userContentController.add(self , name : "zjlao")//传值的关键 , 释放的时候记得移除
         
         
-        
-        self.webView.frame = CGRect(x: 0.0, y: NavigationBarHeight, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - NavigationBarHeight)
+        var  webViewY = 64
+        if DDDevice.type == .iphoneX {webViewY = 88}
+        var webViewH = UIScreen.main.bounds.height - NavigationBarHeight
+        if DDDevice.type == .iphoneX {webViewH -= 34}
+        self.webView.frame = CGRect(x: 0.0, y: NavigationBarHeight, width: UIScreen.main.bounds.width, height: webViewH)
         guard let model = self.showModel else {
 //            mylog("webViewController的关键模型为nil\(self.showParameter)")
             return

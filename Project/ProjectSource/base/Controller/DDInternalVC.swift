@@ -9,7 +9,10 @@
 import SnapKit
 import UIKit
 class DDInternalVC: DDProvideForceTouchVC , CustomNaviBarDelegate{
-    var scrollCritical : CGFloat = 64//滚动临界值
+    var scrollCritical : CGFloat {
+        if DDDevice.type == .iphoneX {return 88}
+        return  64
+    }//滚动临界值
     var naviBar : DDNavigatBar!
     private var scrollViews : [UIScrollView] = [UIScrollView]()
     var tableView : UITableView?{
