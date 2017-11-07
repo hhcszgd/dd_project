@@ -65,6 +65,7 @@
 		15DF30751FA9AFAC00588AF1 /* DDItem4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF30381FA9AFAB00588AF1 /* DDItem4VC.swift */; };
 		15DF30761FA9AFAC00588AF1 /* DDItem5NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF303E1FA9AFAB00588AF1 /* DDItem5NavVC.swift */; };
 		15DF30771FA9AFAC00588AF1 /* DDItem5VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF303F1FA9AFAB00588AF1 /* DDItem5VC.swift */; };
+		15E1A6E51FB189C9007C3157 /* DDSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E1A6E41FB189C9007C3157 /* DDSearchVC.swift */; };
 		15E67D861FA9BE0C00A9BB34 /* Japanese.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E67D851FA9BE0C00A9BB34 /* Japanese.strings */; };
 		15E67D8B1FA9BEBE00A9BB34 /* Vietnamese.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E67D8A1FA9BEBE00A9BB34 /* Vietnamese.strings */; };
 		15E67D901FA9BF2C00A9BB34 /* Thai.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15E67D8F1FA9BF2C00A9BB34 /* Thai.strings */; };
@@ -161,6 +162,7 @@
 		15DF30381FA9AFAB00588AF1 /* DDItem4VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDItem4VC.swift; sourceTree = "<group>"; };
 		15DF303E1FA9AFAB00588AF1 /* DDItem5NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDItem5NavVC.swift; sourceTree = "<group>"; };
 		15DF303F1FA9AFAB00588AF1 /* DDItem5VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDItem5VC.swift; sourceTree = "<group>"; };
+		15E1A6E41FB189C9007C3157 /* DDSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDSearchVC.swift; sourceTree = "<group>"; };
 		15E67D821FA9BDDB00A9BB34 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		15E67D831FA9BDDB00A9BB34 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		15E67D841FA9BDDC00A9BB34 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SystemLanguage.strings; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		1584C2541FAB299F00F09CD3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				15E1A6E41FB189C9007C3157 /* DDSearchVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1013,6 +1016,7 @@
 				15DF304D1FA9AFAC00588AF1 /* DDProvideForceTouchVC.swift in Sources */,
 				15DF30661FA9AFAC00588AF1 /* GDIBCollectionCell.swift in Sources */,
 				15DF306F1FA9AFAC00588AF1 /* DDItem1VC.swift in Sources */,
+				15E1A6E51FB189C9007C3157 /* DDSearchVC.swift in Sources */,
 				15DF305D1FA9AFAC00588AF1 /* GDPhotoManager.swift in Sources */,
 				1584C2581FAB29E200F09CD3 /* DDFlowLayout.swift in Sources */,
 				15DF30741FA9AFAC00588AF1 /* DDItem4NavVC.swift in Sources */,
