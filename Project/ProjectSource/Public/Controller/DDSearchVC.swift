@@ -10,7 +10,11 @@ import UIKit
 
 class DDSearchVC: DDNormalVC {
     let datas = [
-        ["1111","22222","22222","22222","22222","22222","22222","22222","22222","22222","22222","22222","22222","22222","33","33"],["444444","555555555555555555555555555555","6666666666666"],["777777777","888888","999999999999999999999999999999999"]
+        ["111111111111111asfgrasdfgasdgfasgasdfgafdgasdgasdgasgasasasdf111olmn1111111","22pjmk.,222","pj'klm.,iopjlk33","1111111111p'ijlkm,.111111111111111","22o9uijno;ilhjoi;222","3io;ljnkjlhno;iljk3"],
+        ["10[hoi;noilkj111","2222222222222222222222","30hio;jno0i;jk3"],
+        ["1111","22222","33333333333333333333","ddd0[oih;nj;pi  weqfasedfasefawefasdfasefasefasfasdfasefasefohkjdd"],
+        ["110[hio;k11","20[hio;jkhio22wsfasdfasdfasdfasdfwefasefawesfwaesfasedfasdfasdfasdfasdfasdfsdfasdf22","30[oihknj3"],
+        ["1[oihk;oikl111","222oih;nklm22","33io;nafgasdgfasdfgasdfgasfdasdfasdfasdfgvasdfvasdfcvasdfcxasdklm,oi;jk"]
     ]
     let searchBox = UITextField.init()
     let collectionView = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: DDSearchLayout())
@@ -44,6 +48,8 @@ class DDSearchVC: DDNormalVC {
         if let searchLayout = collectionView.collectionViewLayout as? DDSearchLayout {
             searchLayout.delegate = self
         }
+        
+//        collectionView.contentInset = UIEdgeInsetsMake(0, 10, 0, 10)//not work
     }
     @objc func search()  {
         print("perform search")
@@ -67,10 +73,26 @@ class DDSearchVC: DDNormalVC {
 }
 extension DDSearchVC : DDSearchLayoutProtocol{
     func provideItemHeight(layout:DDSearchLayout?) -> CGFloat{//定值
-    return 44.0
+    return 30.0
     }
-    func provideItemWidth(layout: DDSearchLayout? ) -> CGFloat{//变值
-        return 64//待更改
+    func provideItemWidth(layout: DDSearchLayout? ,indexPath:IndexPath) -> CGFloat{//变值
+//        return ((collectionView.bounds.width - 40.000000001 ) / 3)
+        let str = datas[indexPath.section][indexPath.item]
+        let label = UILabel()
+        label.text = str
+        label.sizeToFit()
+        return (label.bounds.width  + 10)
+        
+        
+//        if indexPath.item % 3 == 0  {
+//            return 100
+//        }else if indexPath.item % 3 == 1  {
+//            return 366
+//        }else if indexPath.item % 3 == 2  {
+//            return 200
+//        }else{
+//            return 222
+//        }
     }
     func provideColumnMargin(layout:DDSearchLayout?) -> CGFloat{
         return 10
@@ -78,13 +100,16 @@ extension DDSearchVC : DDSearchLayoutProtocol{
     func provideRowMargin(layout:DDSearchLayout?) -> CGFloat{
         return 10
     }
-//    func provideEdgeInsets(layout:DDSearchLayout?) -> UIEdgeInsets
+    func provideEdgeInsets(layout:DDSearchLayout?) -> UIEdgeInsets{
+        return UIEdgeInsetsMake(0, 10, 0, 10)
+    }
     func provideSessionHeaderHeight(layout:DDSearchLayout?) -> CGFloat{//定值
         return 44
     }
     func provideSessionFooterHeight(layout:DDSearchLayout?) -> CGFloat{//定值
         return 44
     }
+    
 }
 extension DDSearchVC : UICollectionViewDelegate , UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
@@ -94,7 +119,6 @@ extension DDSearchVC : UICollectionViewDelegate , UICollectionViewDataSource{
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "DDSearchItem", for: indexPath)
         if let realItem = item as? DDSearchItem {
             realItem.title = datas[indexPath.section][indexPath.item]
-            print("title ---------> \(datas[indexPath.section][indexPath.item])")
             return realItem
         }
         return item
@@ -135,6 +159,8 @@ class DDSearchItem: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         titleLabel.frame = self.contentView.bounds
+        self.layer.cornerRadius = self.bounds.height * 0.1
+        self.layer.masksToBounds = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -186,6 +212,7 @@ class DDSearchSessionFooter: UICollectionReusableView {
         super.layoutSubviews()
         label1.frame = CGRect(x: 20, y: 0, width: 150, height: 44)
         label2.frame = CGRect(x: 150, y: 0, width: 150, height: 44)
+        
         func showSubviews(isShow:Bool){
             for (_ , subview ) in self.subviews.enumerated(){
                 subview.isHidden = !isShow

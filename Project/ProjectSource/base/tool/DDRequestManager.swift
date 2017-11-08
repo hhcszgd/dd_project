@@ -15,7 +15,8 @@
 import UIKit
 import Alamofire
 class DDRequestManager: NSObject {
-    let baseUrl = "http://api.zdlao.dev/"
+//    let baseUrl = "http://api.zdlao.dev/"
+    let baseUrl = "http://api.hilao.cc/"
     
     var token : String? = "token"
     static let share : DDRequestManager = DDRequestManager()
