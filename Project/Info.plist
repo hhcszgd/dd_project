@@ -39,6 +39,39 @@
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
+			<key>api.hilao.cc</key>
+			<dict>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+			<key>api.hilao.cn</key>
+			<dict>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+			<key>api.hilao.dev</key>
+			<dict>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
 			<key>api.zdlao.dev</key>
 			<dict>
 				<key>NSExceptionMinimumTLSVersion</key>
@@ -61,39 +94,6 @@
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
-            <key>api.hilao.cc</key>
-            <dict>
-                <key>NSExceptionMinimumTLSVersion</key>
-                <string>TLSv1.0</string>
-                <key>NSIncludesSubdomains</key>
-                <true/>
-                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                <false/>
-            </dict>
-            <key>api.hilao.dev</key>
-            <dict>
-                <key>NSExceptionMinimumTLSVersion</key>
-                <string>TLSv1.0</string>
-                <key>NSIncludesSubdomains</key>
-                <true/>
-                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                <false/>
-            </dict>
-            <key>api.hilao.cn</key>
-            <dict>
-                <key>NSExceptionMinimumTLSVersion</key>
-                <string>TLSv1.0</string>
-                <key>NSIncludesSubdomains</key>
-                <true/>
-                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                <false/>
-            </dict>
 		</dict>
 	</dict>
 	<key>UILaunchStoryboardName</key>
@@ -107,7 +107,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

@@ -15,7 +15,7 @@
 import UIKit
 import Alamofire
 class DDRequestManager: NSObject {
-//    let baseUrl = "http://api.zdlao.dev/"
+//    let baseUrl = "http://api.hilao.dev/"
     let baseUrl = "http://api.hilao.cc/"
     
     var token : String? = "token"
@@ -31,6 +31,16 @@ class DDRequestManager: NSObject {
         if let url  = URL(string:baseUrl + "password/checkPhone"){
         let para = ["phone":"18838120446"]
             return Alamofire.request(url , method: HTTPMethod.post , parameters: para   ).responseJSON(completionHandler: { (response) in
+                print("pppppp\(response.result)")
+            })
+        }else{return nil }
+    }
+    
+    @discardableResult
+    func getKey() -> DataRequest? {
+        if let url  = URL(string:baseUrl + "passport/getValidateCodeKey"){
+
+            return Alamofire.request(url , method: HTTPMethod.post , parameters: nil   ).responseJSON(completionHandler: { (response) in
                 print("pppppp\(response.result)")
             })
         }else{return nil }

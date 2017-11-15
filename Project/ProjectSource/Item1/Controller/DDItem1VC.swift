@@ -21,10 +21,12 @@ class DDItem1VC: DDNormalVC {
         self.testNeswork()
     }
     func testNeswork() {
-        let a = DDRequestManager.share.checkPhone()?.responseJSON(completionHandler: { (response) in
-            print("xxx\(response.result)")
+        let a = DDRequestManager.share.getKey()?.responseJSON(completionHandler: { (response) in
+            print("print result of getKey : \(response.description)")
+            print("print response'result \(response.result)")
+            print("print response'data  \(response.data )")
+            dump("dump response.value : \(response.value)")
         })
-        print( "asdfas\(a )")
     }
 
     func testLocalize() {
