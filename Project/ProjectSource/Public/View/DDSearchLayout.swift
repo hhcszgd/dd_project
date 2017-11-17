@@ -5,7 +5,7 @@
 //  Created by WY on 2017/11/2.
 //  Copyright © 2017年 HHCSZGD. All rights reserved.
 //
-
+/*横向流水布局*/
 import UIKit
 
 

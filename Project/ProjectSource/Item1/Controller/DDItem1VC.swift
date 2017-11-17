@@ -9,9 +9,11 @@
 import UIKit
 import CryptoSwift
 class DDItem1VC: DDNormalVC {
-
+    let collectionView = UICollectionView.init(frame: UIScreen.main.bounds, collectionViewLayout: DDMidBigLayout())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        testMidBigLayout()
 //        GDStorgeManager.standard.setValue(nil , forKey: LLanguageTableName)// .value(forKey: LLanguageTableName)
 //        print(GDLanguageManager.titleByKey(key: "title"))
 //        let sha1   = "title".sha1()
@@ -66,4 +68,28 @@ class DDItem1VC: DDNormalVC {
     }
     */
 
+}
+extension DDItem1VC : UICollectionViewDataSource , UICollectionViewDelegate{
+    func testMidBigLayout() {
+        self.view.addSubview(self.collectionView)
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.register(UICollectionViewCell.self , forCellWithReuseIdentifier: "ddmidbig")
+        if let layout  = collectionView.collectionViewLayout as? DDMidBigLayout {
+            layout.itemSize = CGSize(width: 100 , height: 333)
+            layout.scrollDirection = UICollectionViewScrollDirection.horizontal
+            layout.minimumLineSpacing = 0
+            layout.minimumInteritemSpacing = 0
+            layout.sectionInset = UIEdgeInsets(top: 0, left: collectionView.bounds.width/2 - layout.itemSize.width/2, bottom: 0, right: collectionView.bounds.width/2 - layout.itemSize.width/2)
+        }
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ddmidbig", for: indexPath)
+        cell.backgroundColor = UIColor.randomColor()
+        return cell
+    }
 }

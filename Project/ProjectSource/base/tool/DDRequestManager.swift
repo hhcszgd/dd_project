@@ -15,36 +15,57 @@
 import UIKit
 import Alamofire
 class DDRequestManager: NSObject {
-//    let baseUrl = "http://api.hilao.dev/"
-    let baseUrl = "http://api.hilao.cc/"
+    let baseUrl = "http://api.hilao.dev/"
+//    let baseUrl = "http://api.hilao.cc/"
     
     var token : String? = "token"
     static let share : DDRequestManager = DDRequestManager()
-
+    private func performRequest(url : String,method:HTTPMethod , parameters: Parameters?   ) -> DataRequest? {
+        if let url  = URL(string:baseUrl + url){
+            return Alamofire.request(url , method: HTTPMethod.post , parameters: parameters   ).responseJSON(completionHandler: { (response) in
+                print("print request result -->:\(response.result)")
+            })
+        }else{return nil }
+    }
     /*
      验证手机号/邮箱是否已经存在
      作者：张宏雷
      接口地址： http://api.zdlao.dev/password/checkPhone ||checkEmail
      */
     @discardableResult
-    func checkPhone() -> DataRequest? {
-        if let url  = URL(string:baseUrl + "password/checkPhone"){
-        let para = ["phone":"18838120446"]
-            return Alamofire.request(url , method: HTTPMethod.post , parameters: para   ).responseJSON(completionHandler: { (response) in
-                print("pppppp\(response.result)")
-            })
-        }else{return nil }
+    func checkPhone(phoneNum : String) -> DataRequest? {
+        let para = ["phone":phoneNum]
+        let url = "password/checkPhone"
+        return Alamofire.request(url  , method: HTTPMethod.post , parameters: para)
     }
     
+    func checkEmail(email:String) -> DataRequest? {
+        let url  = "password/checkPhone"
+        let para = ["email":email]
+        return performRequest(url: url , method: HTTPMethod.post, parameters: para)
+    }
+    /*
+    获取验证码key值
+     作者：张宏雷
+     接口地址： http://api.hilao.dev/passport/getValidateCodeKey
+     */
     @discardableResult
     func getKey() -> DataRequest? {
-        if let url  = URL(string:baseUrl + "passport/getValidateCodeKey"){
-
-            return Alamofire.request(url , method: HTTPMethod.post , parameters: nil   ).responseJSON(completionHandler: { (response) in
-                print("pppppp\(response.result)")
-            })
-        }else{return nil }
+        let url  =  "passport/getValidateCodeKey"
+        return performRequest(url: url , method: HTTPMethod.post, parameters: nil)
     }
+    /*3.    验证码图片地址
+     作者：张宏雷
+     接口地址： http://api.hilao.dev/passport/getValidateCodeImg/UVlkdzOoAN0sr26Y
+     请求方式：GET
+     说明：key值以url地址段GET方式传递
+     */
+    @discardableResult
+    func getAuthCodeImgUrl(key:String) -> DataRequest? {
+        let url  = "passport/getValidateCodeImg/" + key
+        return performRequest(url: url , method: HTTPMethod.get, parameters: nil )
+    }
+    
 }
 
 

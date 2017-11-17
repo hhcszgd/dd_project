@@ -33,6 +33,7 @@ class DDSearchVC: DDNormalVC {
         rightView.backgroundColor = UIColor.blue
         searchBox.rightView = rightView
         searchBox.rightViewMode = .always
+        searchBox.placeholder = "热销"
         let searchButton =  UIBarButtonItem.init(title: "搜索", style: UIBarButtonItemStyle.plain, target: self, action: #selector(search))
         searchButton.setTitlePositionAdjustment(UIOffset.init(horizontal: 9, vertical: 0), for: UIBarMetrics.default)
         self.navigationItem.rightBarButtonItem = searchButton
@@ -52,13 +53,20 @@ class DDSearchVC: DDNormalVC {
 //        collectionView.contentInset = UIEdgeInsetsMake(0, 10, 0, 10)//not work
     }
     @objc func search()  {
-        print("perform search")
+        self.searchBox.resignFirstResponder()
+        var keyWord = ""
+        if let tempKeyWord =  self.searchBox.text, !tempKeyWord.isEmpty{keyWord = tempKeyWord}else{
+            if let placeHolderWork =  self.searchBox.placeholder , !placeHolderWork.isEmpty{keyWord = placeHolderWork}else{return}
+        }
+        self.performSearch(keyWord:keyWord)
+    }
+    func performSearch(keyWord:String ){
+        print("perform search : \(keyWord)")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -69,6 +77,10 @@ class DDSearchVC: DDNormalVC {
         // Pass the selected object to the new view controller.
     }
     */
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.searchBox.resignFirstResponder()
+    }
 
 }
 extension DDSearchVC : DDSearchLayoutProtocol{
@@ -112,6 +124,11 @@ extension DDSearchVC : DDSearchLayoutProtocol{
     
 }
 extension DDSearchVC : UICollectionViewDelegate , UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.searchBox.resignFirstResponder()
+        let keyWord = datas[indexPath.section][indexPath.item]
+        self.performSearch(keyWord:keyWord)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return datas[section].count
     }
@@ -126,7 +143,9 @@ extension DDSearchVC : UICollectionViewDelegate , UICollectionViewDataSource{
     public func numberOfSections(in collectionView: UICollectionView) -> Int{
         return datas.count
     }
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.searchBox.resignFirstResponder()
+    }
     // The view that is returned must be retrieved from a call to -dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath:
     public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView{
         if kind == UICollectionElementKindSectionHeader {
