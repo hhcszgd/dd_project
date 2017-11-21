@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150356E01FC425C10020C9BC /* DDCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150356DF1FC425C10020C9BC /* DDCollectionReusableView.swift */; };
+		150356E21FC425E30020C9BC /* DDSingleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150356E11FC425E30020C9BC /* DDSingleLayout.swift */; };
+		15047EAE1FC2B84E001DCB21 /* DDNoNavibarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15047EAD1FC2B84E001DCB21 /* DDNoNavibarVC.swift */; };
 		15177B981FAB09AD00FC92BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15177B9A1FAB09AD00FC92BA /* InfoPlist.strings */; };
+		1529488D1FC0245300CCABB0 /* TestMoveItem2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529488C1FC0245300CCABB0 /* TestMoveItem2VC.swift */; };
 		1584C2581FAB29E200F09CD3 /* DDFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584C2571FAB29E200F09CD3 /* DDFlowLayout.swift */; };
 		1584C25A1FAB29F600F09CD3 /* DDSearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584C2591FAB29F600F09CD3 /* DDSearchLayout.swift */; };
 		1584C25C1FAB381700F09CD3 /* DDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584C25B1FAB381700F09CD3 /* DDDevice.swift */; };
 		158FF72E1FBE825D005B7CCA /* DDMidBigLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158FF72D1FBE825D005B7CCA /* DDMidBigLayout.swift */; };
+		15BA5A851FC01715004E35FD /* TestMoveItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BA5A841FC01715004E35FD /* TestMoveItemVC.swift */; };
 		15DF2FB91FA9AE0400588AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF2FB81FA9AE0400588AF1 /* AppDelegate.swift */; };
 		15DF2FBB1FA9AE0400588AF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF2FBA1FA9AE0400588AF1 /* ViewController.swift */; };
 		15DF2FBE1FA9AE0400588AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DF2FBC1FA9AE0400588AF1 /* Main.storyboard */; };
@@ -92,16 +97,21 @@
 
 /* Begin PBXFileReference section */
 		0E28BB7703692892D21A417D /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
+		150356DF1FC425C10020C9BC /* DDCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCollectionReusableView.swift; sourceTree = "<group>"; };
+		150356E11FC425E30020C9BC /* DDSingleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDSingleLayout.swift; sourceTree = "<group>"; };
+		15047EAD1FC2B84E001DCB21 /* DDNoNavibarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDNoNavibarVC.swift; sourceTree = "<group>"; };
 		15177B991FAB09AD00FC92BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15177B9B1FAB09B000FC92BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		15177B9C1FAB09B400FC92BA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		15177B9D1FAB09B500FC92BA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15177B9E1FAB09B700FC92BA /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15177B9F1FAB09B800FC92BA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1529488C1FC0245300CCABB0 /* TestMoveItem2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMoveItem2VC.swift; sourceTree = "<group>"; };
 		1584C2571FAB29E200F09CD3 /* DDFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDFlowLayout.swift; sourceTree = "<group>"; };
 		1584C2591FAB29F600F09CD3 /* DDSearchLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDSearchLayout.swift; sourceTree = "<group>"; };
 		1584C25B1FAB381700F09CD3 /* DDDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDevice.swift; sourceTree = "<group>"; };
 		158FF72D1FBE825D005B7CCA /* DDMidBigLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDMidBigLayout.swift; sourceTree = "<group>"; };
+		15BA5A841FC01715004E35FD /* TestMoveItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMoveItemVC.swift; sourceTree = "<group>"; };
 		15DF2FB51FA9AE0400588AF1 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DF2FB81FA9AE0400588AF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15DF2FBA1FA9AE0400588AF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +230,7 @@
 				1584C2571FAB29E200F09CD3 /* DDFlowLayout.swift */,
 				1584C2591FAB29F600F09CD3 /* DDSearchLayout.swift */,
 				158FF72D1FBE825D005B7CCA /* DDMidBigLayout.swift */,
+				150356E11FC425E30020C9BC /* DDSingleLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				15E1A6E41FB189C9007C3157 /* DDSearchVC.swift */,
+				15BA5A841FC01715004E35FD /* TestMoveItemVC.swift */,
+				1529488C1FC0245300CCABB0 /* TestMoveItem2VC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,6 +347,7 @@
 		15DF2FEB1FA9AFAB00588AF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				15047EAD1FC2B84E001DCB21 /* DDNoNavibarVC.swift */,
 				15DF2FEC1FA9AFAB00588AF1 /* DDBaseNavVC.swift */,
 				15DF2FED1FA9AFAB00588AF1 /* DDInternalVC.swift */,
 				15DF2FEE1FA9AFAB00588AF1 /* DDNormalVC.swift */,
@@ -399,6 +413,7 @@
 		15DF30071FA9AFAB00588AF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				150356DF1FC425C10020C9BC /* DDCollectionReusableView.swift */,
 				15DF30081FA9AFAB00588AF1 /* DDNavigatBar.swift */,
 				15DF30091FA9AFAB00588AF1 /* DDTableView.swift */,
 				15DF300A1FA9AFAB00588AF1 /* GDAlertView.swift */,
@@ -990,6 +1005,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15DF30691FA9AFAC00588AF1 /* GDIBScrollView.swift in Sources */,
+				1529488D1FC0245300CCABB0 /* TestMoveItem2VC.swift in Sources */,
 				1584C25C1FAB381700F09CD3 /* DDDevice.swift in Sources */,
 				15DF30711FA9AFAC00588AF1 /* DDItem2VC.swift in Sources */,
 				15DF304B1FA9AFAC00588AF1 /* DDInternalVC.swift in Sources */,
@@ -997,13 +1013,17 @@
 				15DF30611FA9AFAC00588AF1 /* DDTableView.swift in Sources */,
 				15DF30601FA9AFAC00588AF1 /* DDNavigatBar.swift in Sources */,
 				15DF2FBB1FA9AE0400588AF1 /* ViewController.swift in Sources */,
+				150356E21FC425E30020C9BC /* DDSingleLayout.swift in Sources */,
 				15DF304A1FA9AFAC00588AF1 /* DDBaseNavVC.swift in Sources */,
 				15DF30551FA9AFAC00588AF1 /* GDLocation.swift in Sources */,
+				15BA5A851FC01715004E35FD /* TestMoveItemVC.swift in Sources */,
 				15DF30571FA9AFAC00588AF1 /* DDShowProtocol.swift in Sources */,
 				15DF305F1FA9AFAC00588AF1 /* PCH.swift in Sources */,
 				15DF30641FA9AFAC00588AF1 /* GDMapInView.swift in Sources */,
 				15DF304F1FA9AFAC00588AF1 /* DDRootTabBarVC.swift in Sources */,
 				15DF30521FA9AFAC00588AF1 /* DDVCExtionsion.swift in Sources */,
+				150356E01FC425C10020C9BC /* DDCollectionReusableView.swift in Sources */,
+				15047EAE1FC2B84E001DCB21 /* DDNoNavibarVC.swift in Sources */,
 				15DF30501FA9AFAC00588AF1 /* DDViewController.swift in Sources */,
 				15DF304C1FA9AFAC00588AF1 /* DDNormalVC.swift in Sources */,
 				15DF2FC11FA9AE0400588AF1 /* Project.xcdatamodeld in Sources */,

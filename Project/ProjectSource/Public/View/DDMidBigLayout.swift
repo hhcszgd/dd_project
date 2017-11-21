@@ -9,23 +9,27 @@
 import UIKit
 
 class DDMidBigLayout: UICollectionViewFlowLayout {
-    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        return super.layoutAttributesForItem(at: indexPath)
-    }
+//    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+//        return super.layoutAttributesForItem(at: indexPath)
+//    }
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let centerX = (self.collectionView?.bounds.width ?? 0) * 0.5
         
-        let layoutAttributes = super.layoutAttributesForElements(in: rect)
-        for (index , attribute) in (layoutAttributes ?? []).enumerated() {
+        let systemLayoutAttributes = super.layoutAttributesForElements(in: rect)
+        let layoutAttributes = Array.init(systemLayoutAttributes ?? [])//用拷贝的副本
+        var arrToReturn = [UICollectionViewLayoutAttributes]()
+        for (_ , attribute) in layoutAttributes .enumerated() {
+            let tempAttribute = attribute.copy() as! UICollectionViewLayoutAttributes//copy first
             let offsetX = (collectionView?.contentOffset.x ?? 0)
-            let scale = 1 - abs(attribute.center.x - offsetX - centerX) / (self.collectionView?.bounds.width ?? 110)
-            attribute.transform = CGAffineTransform.init(scaleX: scale, y: scale )
+            let scale = 1 - abs(tempAttribute.center.x - offsetX - centerX) / (self.collectionView?.bounds.width ?? 110)
+            tempAttribute.transform = CGAffineTransform.init(scaleX: scale, y: scale )
 //              var  transform   = CATransform3D()
 //            transform.m34 = scale
 //            attribute.transform3D = transform
+            arrToReturn.append(tempAttribute)
             
         }
-        return layoutAttributes
+        return arrToReturn // layoutAttributes
     }
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         let result = proposedContentOffset.x / self.itemSize.width //忽略itemMargin

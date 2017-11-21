@@ -9,7 +9,7 @@
 import UIKit
 import CryptoSwift
 class DDItem1VC: DDNormalVC {
-    let collectionView = UICollectionView.init(frame: UIScreen.main.bounds, collectionViewLayout: DDMidBigLayout())
+    let collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 88, width: UIScreen.main.bounds.width, height: 400), collectionViewLayout: DDMidBigLayout())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +56,10 @@ class DDItem1VC: DDNormalVC {
 //        DDAccount.share.setPropertisOfShareBy(dict : ["name": "JohnLock" , "head_images" : "http://www.baidu.com/" , "member_id" : "3"] as [String : AnyObject])
 //        
 //        self.navigationController?.pushViewController(DDNormalVC(), animated: true )
+//        self.navigationController?.pushViewController(TestMoveItemVC(collectionViewLayout: UICollectionViewFlowLayout()), animated: true )
+        
+        self.navigationController?.pushViewController(TestMoveItem2VC(), animated: true )
+
     }
 
     /*
@@ -69,6 +73,10 @@ class DDItem1VC: DDNormalVC {
     */
 
 }
+
+
+
+
 extension DDItem1VC : UICollectionViewDataSource , UICollectionViewDelegate{
     func testMidBigLayout() {
         self.view.addSubview(self.collectionView)
@@ -76,7 +84,7 @@ extension DDItem1VC : UICollectionViewDataSource , UICollectionViewDelegate{
         self.collectionView.dataSource = self
         self.collectionView.register(UICollectionViewCell.self , forCellWithReuseIdentifier: "ddmidbig")
         if let layout  = collectionView.collectionViewLayout as? DDMidBigLayout {
-            layout.itemSize = CGSize(width: 100 , height: 333)
+            layout.itemSize = CGSize(width: 90 , height: 50)
             layout.scrollDirection = UICollectionViewScrollDirection.horizontal
             layout.minimumLineSpacing = 0
             layout.minimumInteritemSpacing = 0
@@ -85,7 +93,7 @@ extension DDItem1VC : UICollectionViewDataSource , UICollectionViewDelegate{
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 320
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ddmidbig", for: indexPath)
