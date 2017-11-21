@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		150356E01FC425C10020C9BC /* DDCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150356DF1FC425C10020C9BC /* DDCollectionReusableView.swift */; };
 		150356E21FC425E30020C9BC /* DDSingleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150356E11FC425E30020C9BC /* DDSingleLayout.swift */; };
+		150356E41FC4272B0020C9BC /* GDImagePickview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150356E31FC4272A0020C9BC /* GDImagePickview.swift */; };
 		15047EAE1FC2B84E001DCB21 /* DDNoNavibarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15047EAD1FC2B84E001DCB21 /* DDNoNavibarVC.swift */; };
 		15177B981FAB09AD00FC92BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15177B9A1FAB09AD00FC92BA /* InfoPlist.strings */; };
 		1529488D1FC0245300CCABB0 /* TestMoveItem2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529488C1FC0245300CCABB0 /* TestMoveItem2VC.swift */; };
@@ -99,6 +100,7 @@
 		0E28BB7703692892D21A417D /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		150356DF1FC425C10020C9BC /* DDCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCollectionReusableView.swift; sourceTree = "<group>"; };
 		150356E11FC425E30020C9BC /* DDSingleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDSingleLayout.swift; sourceTree = "<group>"; };
+		150356E31FC4272A0020C9BC /* GDImagePickview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDImagePickview.swift; sourceTree = "<group>"; };
 		15047EAD1FC2B84E001DCB21 /* DDNoNavibarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDNoNavibarVC.swift; sourceTree = "<group>"; };
 		15177B991FAB09AD00FC92BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		15177B9B1FAB09B000FC92BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 		15DF2FFE1FA9AFAB00588AF1 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				150356E31FC4272A0020C9BC /* GDImagePickview.swift */,
 				15DF2FFF1FA9AFAB00588AF1 /* DDAccount.swift */,
 				15DF30001FA9AFAB00588AF1 /* DDRequestManager.swift */,
 				15DF30011FA9AFAB00588AF1 /* DDShowManager.swift */,
@@ -1012,6 +1015,7 @@
 				15DF30561FA9AFAC00588AF1 /* DDForceTouchProtocol.swift in Sources */,
 				15DF30611FA9AFAC00588AF1 /* DDTableView.swift in Sources */,
 				15DF30601FA9AFAC00588AF1 /* DDNavigatBar.swift in Sources */,
+				150356E41FC4272B0020C9BC /* GDImagePickview.swift in Sources */,
 				15DF2FBB1FA9AE0400588AF1 /* ViewController.swift in Sources */,
 				150356E21FC425E30020C9BC /* DDSingleLayout.swift in Sources */,
 				15DF304A1FA9AFAC00588AF1 /* DDBaseNavVC.swift in Sources */,
