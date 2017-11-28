@@ -33,6 +33,7 @@ class DDSingleLayout: UICollectionViewLayout {
     override func prepare() {
         super.prepare()
         attributes.removeAll()
+        maxY = 0 
         itemX =  self.delegate?.provideEdgeInsets?(layout: self ).left ?? 0
         let sectionCount = self.collectionView?.numberOfSections ?? 0
         for sectionIndex  in 0..<sectionCount {

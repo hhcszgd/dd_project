@@ -42,4 +42,16 @@ class DDNormalVC: DDProvideForceTouchVC {
     }
     */
 
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        super.preferredStatusBarStyle
+        return UIStatusBarStyle.lightContent
+    }
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
+    //    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+    //        super.preferredStatusBarUpdateAnimation
+    //        return UIStatusBarAnimation.slide
+    //
+    //    }
 }

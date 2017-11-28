@@ -21,11 +21,12 @@ enum LoadDataType {
 let GDMessageCount = "GDMessageCount"
 //MARK: swift3.0.1通知名字
 let GDLanguageChanged = NSNotification.Name(rawValue:"languageChanged")
-let GDHomeTabBarReclick = NSNotification.Name("GDHomeTabBarReclick")
-let GDClassifyTabBarReclick = NSNotification.Name("GDClassifyTabBarReclick")
-let GDLaoTabBarReclick = NSNotification.Name("GDLaoTabBarReclick")
-let GDShopcarTabBarReclick = NSNotification.Name("GDShopcarTabBarReclick")
-let GDProfileTabBarReclick = NSNotification.Name("GDProfileTabBarReclick")
+
+let DDTabBarItem1Reclick = NSNotification.Name("TabBarItem1Reclick")
+let DDTabBarItem2Reclick = NSNotification.Name("TabBarItem2Reclick")
+let DDTabBarItem3Reclick = NSNotification.Name("TabBarItem3Reclick")
+let DDTabBarItem4Reclick = NSNotification.Name("TabBarItem4Reclick")
+let DDTabBarItem5Reclick = NSNotification.Name("TabBarItem5Reclick")
 let GDMessageCountChanged = NSNotification.Name("GDMessageCountChanged")
 
 //MARK: notificationName
@@ -50,7 +51,14 @@ var  NavigationBarHeight : CGFloat {
 let SCREENWIDTH = UIScreen.main.bounds.size.width
 let SCREENHEIGHT = UIScreen.main.bounds.size.height
 
-
+var rootNaviVC : DDRootNavVC?{
+    if let window = UIApplication.shared.delegate?.window as? UIWindow {
+        if let rootNaviVC =  window.rootViewController as? DDRootNavVC{
+            return rootNaviVC
+        }
+    }
+    return nil
+}
 //let screenW = UIScreen.main.bounds.size.width
 //let screenH = UIScreen.main.bounds.size.height
 
@@ -219,6 +227,8 @@ public func mylog <T>(_ message: T, fileName: String = #file, methodName: String
 //        print(lineNumber)
 //        print("👉\(fileName) [\(lineNumber)]\n\(message)👈")
 //        print("\(methodName)[\(lineNumber)]:\(message)")
+            let  url = URL.init(fileURLWithPath: fileName)
+            print("\(url.lastPathComponent)[\(lineNumber)]:\(message)")
     #endif
 }
 
@@ -288,4 +298,21 @@ var  systemVersion : Float  {
 
 }
 
+///MARK: Unicode转中文
+extension String{
+    var unicodeStr:String {
+        let tempStr1 = self.replacingOccurrences(of: "\\u", with: "\\U")
+        let tempStr2 = tempStr1.replacingOccurrences(of: "\"", with: "\\\"")
+        let tempStr3 = ("\"" + tempStr2) + "\""
+        let tempData = tempStr3.data(using: String.Encoding.utf8)
+        var returnStr:String = ""
+        do {
+            returnStr = try PropertyListSerialization.propertyList(from: tempData!, options: PropertyListSerialization.MutabilityOptions(), format: nil) as! String
+        } catch {
+            print(error)
+        }
+        return returnStr.replacingOccurrences(of: "\\r\\n", with: "\n")
+    }
+    
+}
 /*#define gotResourceInSubBundle(name,type,directory)  [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Resource" ofType:@"bundle"]] pathForResource:(name) ofType:(type) inDirectory:(directory)]*/

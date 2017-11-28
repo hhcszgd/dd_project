@@ -42,3 +42,11 @@ class DDBaseNavVC: UINavigationController {
     */
 
 }
+extension DDBaseNavVC {
+    override open var childViewControllerForStatusBarStyle: UIViewController?{
+        return self.visibleViewController
+    }
+    override open var childViewControllerForStatusBarHidden: UIViewController?{
+        return self.visibleViewController
+    }
+}

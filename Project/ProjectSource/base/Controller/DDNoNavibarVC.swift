@@ -12,7 +12,12 @@ class DDNoNavibarVC: DDProvideForceTouchVC  ,UIGestureRecognizerDelegate {
     
     /// 滚动临界值,也是naviBar的高度 , 默认64.0
     var scrollCritical : CGFloat = 64.0
-    let naviBar : UIView = UIView.init()
+    lazy var naviBar : UIView  = {
+        
+        let h : CGFloat = DDDevice.type == .iphoneX ? 88 : 64
+        let temp = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: h    ))
+        return temp
+    }()
     private var scrollViews : [UIScrollView] = [UIScrollView]()
     var collectionView : UICollectionView?{
         didSet{
@@ -52,10 +57,10 @@ class DDNoNavibarVC: DDProvideForceTouchVC  ,UIGestureRecognizerDelegate {
         self.navigationController?.setNavigationBarHidden(true   , animated: true )//自定义导航栏就需要隐藏导航控制器的导航栏1
         naviBar.backgroundColor = UIColor.orange
         if naviBar.superview == nil  { self.view.addSubview(naviBar)}
-        naviBar.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: scrollCritical)
+        let naviBarH = naviBar.bounds.height
         naviBar.snp.makeConstraints { (make ) in
             make.left.top.right.equalTo(self.view)
-            make.height.equalTo(scrollCritical)
+            make.height.equalTo(naviBarH)
         }
         print("can convert to UIGestureRecogniazerDelegate \(self.isKind(of: UIGestureRecognizerDelegate.self ))")
         if let delegate = self as? UIGestureRecognizerDelegate{
